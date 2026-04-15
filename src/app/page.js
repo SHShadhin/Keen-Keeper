@@ -3,7 +3,7 @@ import Banner from "@/components/navbar/banner/Banner";
 
 export default async function Home() {
 
-  const res = await fetch('http://localhost:3000/friends.json');
+  const res = await fetch('https://keen-keeper-sand.vercel.app/friends.json');
   const friends = await res.json();
   // console.log(friends)
   return (
