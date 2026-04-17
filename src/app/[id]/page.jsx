@@ -1,3 +1,4 @@
+import { notFound } from 'next/navigation';
 import CheckInSection from '@/components/friend/CheckInSection';
 import Image from 'next/image';
 import React from 'react';
@@ -5,16 +6,19 @@ import { FaRegBell } from 'react-icons/fa';
 import { FiArchive } from 'react-icons/fi';
 import { RiDeleteBin6Line } from 'react-icons/ri';
 
-const FriendDetailsPage = async ({params}) => {
+const FriendDetailsPage = async ({ params }) => {
   const { id } = await params;
-  console.log(id)
-  
+  console.log(id);
+
   const res = await fetch('https://keen-keeper-sand.vercel.app/friends.json');
-  const data = await res.json()
-  console.log(data)
+  const data = await res.json();
+  console.log(data);
 
   const friend = data.find(f => f.id == Number(id));
-  console.log(friend, 'Friend')
+  if (!friend) {
+    notFound();
+  }
+  console.log(friend, 'Friend');
 
   const statusColors = {
     Overdue: 'bg-[#EF4444] text-white',
@@ -115,6 +119,6 @@ const FriendDetailsPage = async ({params}) => {
       </div>
     </div>
   );
-};;
+};
 
 export default FriendDetailsPage;
