@@ -1,19 +1,19 @@
+import CheckInSection from '@/components/friend/CheckInSection';
+import Image from 'next/image';
 import React from 'react';
 import { FaRegBell } from 'react-icons/fa';
 import { FiArchive } from 'react-icons/fi';
-import { LuPhoneCall } from 'react-icons/lu';
-import { MdOutlineTextsms } from 'react-icons/md';
-import { PiVideoCameraBold } from 'react-icons/pi';
 import { RiDeleteBin6Line } from 'react-icons/ri';
 
 const FriendDetailsPage = async ({params}) => {
   const { id } = await params;
+  console.log(id)
   
   const res = await fetch('https://keen-keeper-sand.vercel.app/friends.json');
   const data = await res.json()
   console.log(data)
 
-  const friend = data.find(f => f.id == id);
+  const friend = data.find(f => f.id == Number(id));
   console.log(friend, 'Friend')
 
   const statusColors = {
@@ -27,7 +27,9 @@ const FriendDetailsPage = async ({params}) => {
       <div className="flex flex-col gap-6 ">
         <div className="card bg-base-100 card-md shadow-sm text-center p-10 space-y-4">
           <div className="flex justify-center ">
-            <img
+            <Image
+              height={100}
+              width={100}
               className="rounded-full w-[100px] h-[100px] "
               src={friend.picture}
               alt=""
@@ -107,21 +109,7 @@ const FriendDetailsPage = async ({params}) => {
 
           <div className="bg-base-100 p-4 h-[170] shadow-sm rounded-xl">
             <h3 className="font-semibold mb-4">Quick Check-In</h3>
-
-            <div className="grid grid-cols-3 gap-4 ">
-              <div className="bg-gray-50 p-4 shadow-sm rounded-lg flex justify-center items-center flex-col pb-5">
-                <LuPhoneCall />
-                Call
-              </div>
-              <div className="bg-gray-50 p-4 shadow-sm rounded-lg flex justify-center items-center flex-col">
-                <MdOutlineTextsms />
-                Text
-              </div>
-              <div className="bg-gray-50 p-4 shadow-sm rounded-lg flex justify-center items-center flex-col">
-                <PiVideoCameraBold />
-                Video
-              </div>
-            </div>
+            <CheckInSection friendName={friend.name}></CheckInSection>
           </div>
         </div>
       </div>
