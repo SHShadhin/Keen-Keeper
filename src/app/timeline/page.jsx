@@ -5,6 +5,10 @@ import { LuPhoneCall } from 'react-icons/lu';
 import { MdOutlineTextsms } from 'react-icons/md';
 import { PiVideoCameraBold } from 'react-icons/pi';
 
+ const metadata = {
+  title: 'Keen Keeper | Timeline',
+  description: 'Keen Keeper is a Social Media Website',
+};
 const TimelinePage = () => {
   const {cart} = useContext(FriendContext)
   console.log('Current Cart Data:', cart);
@@ -40,7 +44,7 @@ const TimelinePage = () => {
 
         <input
           type="text"
-          className="input"
+          className="input mb-7"
           placeholder="Filter timeline"
           list="browsers"
           value={search}

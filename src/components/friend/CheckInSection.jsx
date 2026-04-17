@@ -5,11 +5,9 @@ import { MdOutlineTextsms } from 'react-icons/md';
 import { PiVideoCameraBold } from 'react-icons/pi';
 import { useContext } from 'react';
 import { FriendContext } from '../context/FriendContext';
-import { useRouter } from 'next/navigation';
 
 const CheckInSection = ({ friendName }) => {
     const { AddCart } = useContext(FriendContext);
-    const router = useRouter();
 
     const handleAdd = type => {
       const newData = {
@@ -30,7 +28,6 @@ const CheckInSection = ({ friendName }) => {
          autoClose: 1000,
        });
 
-      router.push('/timeline');
     };
 
   return (

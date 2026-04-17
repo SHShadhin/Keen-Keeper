@@ -43,11 +43,15 @@ const Navbar = () => {
   );
 
   return (
-    <div className="bg-base-100 shadow-sm  ">
-      <div className="navbar max-w-10/12 mx-auto">
+    <div className="bg-base-100 shadow-sm ">
+      <div className="navbar   max-w-10/12 mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost md:hidden lg:hidden">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost md:hidden lg:hidden"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -72,12 +76,7 @@ const Navbar = () => {
             </ul>
           </div>
 
-          <Image
-            src={logoImg}
-            alt="KeenKeeper"
-            width={140}
-            height={35}
-          />
+          <Image src={logoImg} alt="KeenKeeper" width={140} height={35} />
         </div>
 
         <div className="navbar-end hidden md:flex lg:flex">
