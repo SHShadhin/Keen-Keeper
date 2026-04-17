@@ -32,7 +32,7 @@ const StatsPage = () => {
 
           <div className="flex justify-center">
             {data.length === 0 ? (
-              <p className="text-gray-400 italic py-25">No data yet</p>
+              <p className="text-gray-400 italic md:py-25 py-7">No data yet</p>
             ) : (
               <PieChart
                 style={{
