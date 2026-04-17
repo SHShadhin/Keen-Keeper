@@ -41,7 +41,6 @@ const TimelinePage = () => {
       <div className="mx-[20px] md:mx-[20px] lg:mx-[20px] lg:mx-0">
         <h1 className="text-2xl font-bold mb-6">Timeline Activities</h1>
 
-
         <input
           type="text"
           className="input mb-7"
@@ -50,6 +49,11 @@ const TimelinePage = () => {
           value={search}
           onChange={e => setSearch(e.target.value)}
         />
+        <datalist id="browsers">
+          <option value="Call"></option>
+          <option value="Text"></option>
+          <option value="Video"></option>
+        </datalist>
 
         <div className="flex flex-col gap-4">
           {filteredCart.length === 0 ? (

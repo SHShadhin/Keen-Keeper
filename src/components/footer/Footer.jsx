@@ -38,13 +38,15 @@ const Footer = () => {
             </div>
           </div>
           <div className="h-0.5 bg-[#225946] "></div>
-          <div className="flex  justify-between items-center text-[#FAFAFA]/80 mt-7.5">
-            <p>© 2026 KeenKeeper. All rights reserved.</p>
-              <ol className="flex gap-15 items-center">
-                <li>Privacy Policy</li>
-                <li>Terms of Service</li>
-                <li>Cookies</li>
-              </ol>
+          <div className="flex md:flex-row flex-col items-center justify-between text-[#FAFAFA]/80 mt-8">
+            <div>
+              <p>© 2026 KeenKeeper. All rights reserved.</p>
+            </div>
+            <ol className="flex md:gap-15 gap-5 items-center">
+              <li>Privacy Policy</li>
+              <li>Terms of Service</li>
+              <li>Cookies</li>
+            </ol>
           </div>
         </div>
       </div>

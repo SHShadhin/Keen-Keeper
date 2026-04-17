@@ -40,6 +40,8 @@ const Banner = () => {
           </div>
         </div>
       </div>
+
+      <div className="h-0.5 bg-[#dce0e04a] mt-13"></div>
     </div>
   );
 };

@@ -62,7 +62,9 @@ const FriendDetailsPage = async ({ params }) => {
           <div className="text-[#64748B] italic">{friend.bio}</div>
           <div className="text-[#64748B] flex justify-center gap-2 ">
             <div className="italic">Preferred:</div>
-            <span className="text-black">{friend.email}</span>
+            <span className="text-black md:text-[16px] text-sm">
+              {friend.email}
+            </span>
           </div>
         </div>
         <div className="flex flex-col gap-6 ">
@@ -80,9 +82,9 @@ const FriendDetailsPage = async ({ params }) => {
 
       <div className="">
         <div className="space-y-10">
-          <div className="grid grid-cols-3 gap-4">
+          <div className="flex md:flex-row justify-between  flex-col">
             <div className="bg-base-100 h-[140] flex items-center justify-center flex-col p-4 shadow-sm rounded-xl text-center">
-              <h2 className="text-xl font-bold ">
+              <h2 className="md:text-xl text-lg font-bold ">
                 {' '}
                 {friend.days_since_contact}{' '}
               </h2>
