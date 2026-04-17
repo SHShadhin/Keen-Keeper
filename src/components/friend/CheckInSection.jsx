@@ -26,10 +26,10 @@ const CheckInSection = ({ friendName }) => {
 
       AddCart(newData);
 
-      toast.success(`${type} with ${friendName}!`, {
-        position: 'top-center',
-        autoClose: 3000,
-      });
+       toast.success(`${type} with ${friendName}!`, {
+         position: 'top-right',
+         autoClose: 1000,
+       });
 
       router.push('/timeline');
     };
