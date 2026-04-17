@@ -8,7 +8,6 @@ import { FriendContext } from '../context/FriendContext';
 import { useRouter } from 'next/navigation';
 
 const CheckInSection = ({ friendName }) => {
-  // const { handleDataStore } = useContext(FriendContext);
     const { AddCart } = useContext(FriendContext);
     const router = useRouter();
 
@@ -38,18 +37,6 @@ const CheckInSection = ({ friendName }) => {
     <div>
       <div className="grid grid-cols-3 gap-4 ">
         <div
-          // onClick={() =>
-          //   handleDataStore({
-          //     id: crypto.randomUUID(),
-          //     name: friendName,
-          //     type: 'call',
-          //     date: new Date().toLocaleDateString('en-GB', {
-          //       day: 'numeric',
-          //       month: 'long',
-          //       year: 'numeric',
-          //     }),
-          //   })
-          // }
           onClick={() => handleAdd('Call')}
           className="bg-gray-50 p-4 shadow-sm rounded-lg flex justify-center items-center flex-col pb-5"
         >
@@ -57,18 +44,6 @@ const CheckInSection = ({ friendName }) => {
           Call
         </div>
         <div
-          // onClick={() =>
-          //   handleDataStore({
-          //     id: crypto.randomUUID(),
-          //     name: friendName,
-          //     type: 'text',
-          //     date: new Date().toLocaleDateString('en-GB', {
-          //       day: 'numeric',
-          //       month: 'long',
-          //       year: 'numeric',
-          //     }),
-          //   })
-          // }
           onClick={() => handleAdd('Text')}
           className="bg-gray-50 p-4 shadow-sm rounded-lg flex justify-center items-center flex-col"
         >
@@ -76,18 +51,6 @@ const CheckInSection = ({ friendName }) => {
           Text
         </div>
         <div
-          // onClick={() =>
-          //   handleDataStore({
-          //     id: crypto.randomUUID(),
-          //     name: friendName,
-          //     type: 'video',
-          //     date: new Date().toLocaleDateString('en-GB', {
-          //       day: 'numeric',
-          //       month: 'long',
-          //       year: 'numeric',
-          //     }),
-          //   })
-          // }
           onClick={() => handleAdd('Video')}
           className="bg-gray-50 p-4 shadow-sm rounded-lg flex justify-center items-center flex-col"
         >
